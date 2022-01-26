@@ -1,0 +1,57 @@
+OBJECT Codeunit 63000 Ejecutar Power Shell
+{
+  OBJECT-PROPERTIES
+  {
+    Date=26/01/22;
+    Time=[ 9:46:46];
+    Modified=Yes;
+    Version List=;
+  }
+  PROPERTIES
+  {
+    OnRun=BEGIN
+          END;
+
+  }
+  CODE
+  {
+
+    PROCEDURE PowerShellInvokeCommand@1000000014(Computer@1000000001 : Text;PathFile@1000000002 : Text) : Text;
+    VAR
+      PowerShellRunner@1000000000 : DotNet "'Microsoft.Dynamics.Nav.PowerShellRunner, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.Microsoft.Dynamics.Nav.PowerShellRunner";
+      txt01@1000000004 : TextConst 'ESP=Ha finalizado';
+    BEGIN
+      //Inicializamos variable
+      CLEAR(PowerShellRunner);
+      PowerShellRunner := PowerShellRunner.CreateInSandbox;
+
+      //a¤adimos el pc y la ruta del power shell
+      PowerShellRunner.AddCommand('Invoke-Command');
+      PowerShellRunner.AddParameter('Computer',Computer);
+      PowerShellRunner.AddParameter('File',PathFile);
+
+      //parametro necesario para devolver el error
+      PowerShellRunner.WriteEventOnError := TRUE;
+
+      //ejecutamos y recojemos los resultados
+      PowerShellRunner.BeginInvoke;
+      PowerShellRunner.Results;
+
+      //esperamos ya que puede darse que el powershell tarde mas que navision
+      SLEEP(15000);
+
+      //si hay error lo mostramos
+      IF PowerShellRunner.HadErrors THEN
+        ERROR(PowerShellRunner.ExceptionMessage);
+    END;
+
+    BEGIN
+    {
+      #Creado por Esteve Sanpons Carballares.
+      #https://github.com/Esanpons
+      #Se da acceso libre a modificar y utilizar este objeto libremente. Siempre y cuando se haga referencia al autor.
+    }
+    END.
+  }
+}
+
