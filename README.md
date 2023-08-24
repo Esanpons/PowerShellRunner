@@ -1,8 +1,28 @@
 # PowerShellRunner
-El proyecto "PowerShellRunner" es una solución innovadora diseñada para facilitar la ejecución de scripts de PowerShell desde el entorno de Microsoft Dynamics 365 Business Central. Esta herramienta, permite a los usuarios ejecutar comandos de PowerShell de forma sencilla y eficiente, sin tener que salir de la interfaz de Navision.
 
-Con la integración del PowerShellRunner, los usuarios de Navision pueden aprovechar al máximo las funcionalidades y capacidades de PowerShell para automatizar tareas, administrar sistemas y realizar operaciones avanzadas directamente desde su entorno habitual. Esta solución se presenta como una alternativa flexible y poderosa para ejecutar scripts de PowerShell sin la necesidad de abrir una consola o utilizar herramientas externas.
+El proyecto "PowerShellRunner" es una solución innovadora diseñada para facilitar la ejecución de scripts de PowerShell desde el entorno de Navision. Esta herramienta permite a los usuarios ejecutar comandos de PowerShell de forma sencilla y eficiente, sin tener que salir de la interfaz de Navision.
 
-Al utilizar el PowerShellRunner, los usuarios pueden acceder a un amplio abanico de funcionalidades y comandos de PowerShell, permitiéndoles interactuar con diferentes sistemas y servicios, realizar operaciones complejas, extraer información relevante y automatizar procesos dentro de Business Central. Además, la solución se integra de forma transparente con los flujos de trabajo existentes, proporcionando una experiencia fluida y eficiente.
+## Características destacadas
 
-Con su código fuente disponible en el repositorio de GitHub proporcionado, el proyecto PowerShellRunner es una opción versátil para aquellos que desean aprovechar el poder de PowerShell en el entorno de Microsoft Dynamics 365 Business Central. Ofreciendo una forma sencilla y accesible de ejecutar scripts de PowerShell, este proyecto se convierte en una herramienta valiosa para mejorar la productividad y eficiencia de los usuarios, permitiéndoles automatizar tareas y simplificar procesos en su día a día.
+- Ejecuta comandos de PowerShell desde Navision.
+- Automatiza tareas, administra sistemas y realiza operaciones avanzadas sin salir de la interfaz de usuario.
+- Integración transparente con los flujos de trabajo existentes.
+- Acceso a una amplia gama de funcionalidades y comandos de PowerShell.
+
+## Ventajas
+
+La integración del PowerShellRunner ofrece a los usuarios de Navision la posibilidad de aprovechar al máximo las funcionalidades y capacidades de PowerShell para automatizar tareas, administrar sistemas y realizar operaciones avanzadas directamente desde su entorno habitual. Esta solución se presenta como una alternativa flexible y poderosa para ejecutar scripts de PowerShell sin la necesidad de abrir una consola o utilizar herramientas externas.
+
+## Cómo empezar
+
+1. Clona este repositorio en tu máquina local.
+2. Explora el código fuente y familiarízate con la implementación del PowerShellRunner.
+3. Sigue las instrucciones de instalación y configuración en la documentación del proyecto.
+
+## Autor
+
+Este proyecto fue creado por [Esteve Sanpons](https://www.aesva.es/about/).
+
+## Uso
+
+Este es un proyecto libre y puedes usarlo y modificarlo a tu gusto. Si decides utilizarlo, se agradece la atribución al autor original.
